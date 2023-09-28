@@ -14,6 +14,6 @@ def chat(message: str, history: ChatMessageHistory) -> str:
     request_timeout=180,
   )
   messages = history.messages
-  messages.append(HumanMessage(content=message))
+  # messages.append(HumanMessage(content=message))
   print(messages)
   return llm(messages).content
